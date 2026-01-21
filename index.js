@@ -18,7 +18,7 @@ const NEZHA_PORT = process.env.NEZHA_PORT || '';            // 使用哪吒v1请
 const NEZHA_KEY = process.env.NEZHA_KEY || '';              // 哪吒v1的NZ_CLIENT_SECRET或哪吒v0的agent密钥
 const ARGO_DOMAIN = process.env.ARGO_DOMAIN || 'galaxy.yrock.ggff.net';          // 固定隧道域名,留空即启用临时隧道
 const ARGO_AUTH = process.env.ARGO_AUTH || 'eyJhIjoiNGY1MTgzZTk0NDUyY2M1YWM0NTE3ZGUyZTc1M2E5ZTQiLCJ0IjoiMTY5ZjFmNDMtNWI5ZC00NzIzLTkzMjQtNjljZjFiYTI5NTg3IiwicyI6Ik1EUmtNV013WldNdFpqSTNPQzAwTm1OaUxUa3dOV1V0WldOaE1qY3dOMlprTlRFMSJ9';              // 固定隧道密钥json或token,留空即启用临时隧道,json获取地址：https://json.zone.id
-const ARGO_PORT = process.env.ARGO_PORT || 23801;            // 固定隧道端口,使用token需在cloudflare后台设置和这里一致
+const ARGO_PORT = process.env.ARGO_PORT || 8001;            // 固定隧道端口,使用token需在cloudflare后台设置和这里一致
 const CFIP = process.env.CFIP || 'cdns.doon.eu.org';        // 节点优选域名或优选ip  
 const CFPORT = process.env.CFPORT || 443;                   // 节点优选域名或优选ip对应的端口
 const NAME = process.env.NAME || 'Galaxy';                  // 节点名称
@@ -625,5 +625,6 @@ app.get("/", async function(req, res) {
 });
 
 app.listen(PORT, () => console.log(`http server is running on port:${PORT}!`));
+
 
 
